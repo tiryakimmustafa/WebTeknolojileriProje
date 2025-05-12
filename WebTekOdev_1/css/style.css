@@ -1,0 +1,54 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    background: url(resimler/Giresun_Turkey.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.container .navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
