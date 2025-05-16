@@ -1,0 +1,293 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    background: url(resimler/Giresun_Turkey.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.container .navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+
+
+.navbar .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background: green;
+}
+.signup-form{
+    width: 450px;
+    padding: 20px;
+    text-align: center;
+    background:url(resimler/0138.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border-radius: 50px;
+}
+.signup-form h1{
+    margin-top: 30px;
+    color: #b8be7d;
+    font-size: 40px;
+}
+.signup-form input{
+    display: block;
+    width:100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border:none;
+}
+.txt{
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.signup-btn{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background: yellowgreen;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: block;
+}
+.signup-btn:hover{
+    transform: scale(0.96);
+    background:#fff;
+    color: bisque;
+}
+.signup-form a{
+    text-decoration: none;
+    color: #0dc4b4;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.8s;
+    display: block;
+}
+.signup-form a:hover{
+    color: darkcyan;
+}
+.b{
+    background: url(resimler/Giresun_Turkey.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 50px;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background:#777 ;
+}
+
+.cv-container h1 {
+    color: #2e7d32;
+    text-align: center;
+}
+
+.cv-container h2 {
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section h3 {
+    color: #3c763d;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.cv-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.footer {
+    text-align: left;
+    color: #777;
+    font-size: 14px;
+    margin-top: 40px;
+}
+img{
+    height:500px ;
+    width: 500px;
+    text-align: center;
+
+}
+.b .navbar2{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+.navbar2 ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar2 ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar2 ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.navbar2 .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+.navbar2 .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+.sec-sehrim {
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+
+.sec-sehrim h2 {
+  color: #4e4197;
+  margin-bottom: 10px;
+}
+
+.sehrim {
+  display: flex;
+  padding: 20px;
+  margin-left: 80px;
+}
+
+.sehrim table {
+  border-collapse: collapse;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.gez-yerler {
+    position: fixed;
+    top: 130px;
+    left: 65%;
+    background:rgb(45, 5, 78);
+    padding: 10px 20px;
+    color: #ccc;
+}
+.slider-container {
+    position: fixed;
+    top: 160px;
+    left: 47%;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px ;
+    overflow: hidden;
+    border: 2px solid #4e4197;
+    border-radius: 10px;
+}
+.slider {
+ display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.slide {
+    min-width: 100%;
+}
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    background-color: #4e4197;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.prev { left: 34px; }
+.next { right: 0px; }
+
+.prev:hover, .next:hover {
+    background-color: #3c3378;
+}
+
