@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <script>
+  localStorage.removeItem('student_number');
+</script>
+
+    <div class="navbar2">
+            <div class="logo">
+                <a href="#">GİRESUN</a>
+            </div>
+            <div class="kisisel">
+                <ul>
+                    <li><a href="giris.html">GİRİŞ</a> </li>
+                    <li><a href="hakkımda.html">HAKKIMDA</a> </li>
+                    <li><a href="özgeçmiş.html">EĞİTİM</a></li>
+                    <li><a href="şehrimiz.html">ŞEHRİMİZ</a></li>
+                    <li><a href="takımımız.html">TAKIMIMIZ</a></li>
+                    <li><a href="ilgialanlarim.html">İLGİ ALANLARIM</a> </li>
+                    <li><a href="iletisim.html">İLETİŞİM</a></li>                    
+                </ul>
+            </div>
+    </div>
+    <div class="signup-form">
+        <form name="loginForm" action="login.php" method="POST" onsubmit="return validateForm()">
+            <h1 id="welcome-message" style="display: none;">HOŞGELDİNİZ</h1>
+            <input type="text" name="email" placeholder="Kullanıcı Adı (e-posta)" class="txt">
+            <input type="password" name="password" placeholder="Şifre" class="txt">
+            <input type="submit" value="Giriş Yap" class="signup-btn">
+            <a href="#">Hesabınız yok mu?</a>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

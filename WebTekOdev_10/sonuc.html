@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Sonuçları</title>
+   
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .message {
+      border: 1px solid #aaa;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .message h3 {
+      margin: 0 0 5px 0;
+    }
+    .message p {
+      margin: 3px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Gönderilen Mesajlar</h2>
+<div id="result"></div>
+
+<script>
+  const resultDiv = document.getElementById('result');
+  const messages = JSON.parse(sessionStorage.getItem('messages') || '[]');
+
+  if (messages.length === 0) {
+    resultDiv.innerHTML = "<p>Henüz gönderilmiş mesaj yok.</p>";
+  } else {
+    let html = '';
+    messages.forEach((msg, index) => {
+      html += `
+        <div class="message">
+          <h3>Mesaj #${index + 1} - Gönderim Tarihi: ${msg.date}</h3>
+          <p><strong>İsim:</strong> ${msg.name}</p>
+          <p><strong>E-posta:</strong> ${msg.email}</p>
+          <p><strong>Telefon:</strong> ${msg.phone}</p>
+          <p><strong>Mesaj:</strong><br>${msg.message.replace(/\n/g, '<br>')}</p>
+        </div>
+      `;
+    });
+    resultDiv.innerHTML = html;
+  }
+</script>
+
+</body>
+</html>
