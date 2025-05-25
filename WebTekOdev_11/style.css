@@ -1,0 +1,1168 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body.kendim {
+  background: #004080;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 0; /* Üst boşluk kaldırıldı */
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.hakkimda-container {
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px; /* navbar yüksekliği kadar boşluk verdik */
+}
+
+@media (max-width: 767.98px) {
+  .hakkimda-container {
+    margin-top: 0px; /* navbar alt satıra kaydığında daha büyük boşluk */
+  }
+}
+
+.profil {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.profil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  display: block;
+}
+
+.profil-bilgi h2,
+.profil-bilgi p {
+  text-align: center;
+  color: #ffffff;
+}
+
+h3 {
+  color: #ffcc70;
+  padding-left: 10px;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+ul {
+  list-style: square inside;
+  padding-left: 0;
+  color: #d0d0d0;
+}
+li {
+  margin-bottom: 8px;
+}
+
+.kendim .navbar2 {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px 0;
+  background-color: rgb(72, 143, 31);
+  box-sizing: border-box;
+}
+
+.navbar2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;  /* Esnek ve sarmaya izin verir */
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.navbar2 ul li {
+  line-height: normal;
+  margin: 0;
+  padding: 10px 5px;
+}
+
+.navbar2 ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar2 ul li a:hover {
+  color: yellow;
+  border-bottom: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar2 .logo {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.navbar2 .logo a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: azure;
+}
+
+.navbar-container {
+    background: url(resimler/Giresun_Turkey.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+}
+.navbar-container .navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+.navbar .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+.navbar .logo a {
+   text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+.navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.body {
+    margin: 0;
+    padding: 0;
+    background: green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.signup-form form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.signup-form h1 {
+    color: #b8be7d;
+    font-size: 40px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+}
+
+.signup-btn {
+    margin-top: 30px;
+    background: yellowgreen;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+    transform: scale(0.96);
+    background: #fff;
+    color: bisque;
+}
+
+.signup-form a {
+    text-decoration: none;
+    color: #0dc4b4;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.3s ease;
+    display: block;
+    text-align: center;
+}
+
+.signup-form a:hover {
+    color: darkcyan;
+}
+
+/* Navbar sabit */
+.navbar2 {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar2 ul li {
+    margin: 0 10px;
+}
+
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar2 ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar2 .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+/* Responsive navbar: küçük ekranlarda menüyü alt alta yap */
+@media (max-width: 768px) {
+  .navbar2 {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+  
+  .navbar2 .logo {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar2 ul {
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar2 ul li {
+    margin: 5px 8px;
+  }
+}
+
+/* Formun responsive iyileştirmeleri */
+@media (max-width: 480px) {
+  .signup-form form {
+    max-width: 90%;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .signup-form h1 {
+    font-size: 30px;
+  }
+
+  .signup-form input[type="text"],
+  .signup-form input[type="password"] {
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .signup-btn {
+    height: 44px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+}
+
+body.ozgecmis {
+  margin: 0;
+  padding-top: 0px; /* navbar yüksekliği kadar */
+}
+
+/* Mevcut stillerin devamı */
+.ozgecmis {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #222;
+  margin-top: 80px;
+}
+
+.ozgecmis header,
+.ozgecmis footer {
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 1rem 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.ozgecmis footer {
+  border-radius: 0 0 10px 10px;
+  font-size: 0.9rem;
+}
+
+.ozgecmis section {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.ozgecmis section:last-of-type {
+  border-bottom: none;
+}
+
+.ozgecmis h2 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.ozgecmis article h3 {
+  margin: 0;
+  font-weight: normal;
+  color: #555;
+}
+
+.ozgecmis article p {
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+/* Navbar düzenlemeleri - float kaldırıldı, flex eklendi */
+.ozgecmis .navbar2 {
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(72, 143, 31);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  margin: 0;  /* Üst boşluk sıfır */
+}
+
+.navbar2 .logo {
+  float: none !important;
+  margin: 0;
+  margin-top: 0;
+}
+
+.navbar2 .kisisel ul {
+  float: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  width: auto;
+}
+
+.navbar2 .kisisel ul li {
+  display: inline-flex;
+  align-items: center;
+  line-height: normal;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.navbar2 ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 5px;
+  display: block;
+}
+
+.navbar2 ul li a:hover {
+  color: yellow;
+  border-bottom: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive: 768px altı için */
+@media (max-width: 767.98px) {
+  .navbar2 {
+    position: relative;
+    justify-content: center;
+  }
+
+  .navbar2 .kisisel ul {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .navbar2 .kisisel ul li {
+    margin: 0 8px;
+  }
+  .ozgecmis header{
+    margin-top: 120px;
+  }
+  .ozgecmis{
+    margin-top: 0px;
+  }
+}
+
+.sec-sehrim {
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+.sec-sehrim h2 {
+  color: #4e4197;
+  margin-bottom: 10px;
+}
+.sec-sehrim p{
+    color:#222 ;
+    margin: 20px auto;
+}
+.sehrim {
+  display: flex;
+  padding: 20px;
+  margin-left: 80px;
+}
+.sehrim table {
+  border-collapse: collapse;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.gez-yerler {
+    position: absolute;
+    top: 130px;
+    left: 65%;
+    background:rgb(45, 5, 78);
+    padding: 10px 20px;
+    color: #ccc;
+}
+.slider-container {
+    position: absolute;
+    top:160px;
+    left: 47%;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px ;
+    overflow: hidden;
+    border: 2px solid #4e4197;
+    border-radius: 10px;
+}
+.slider {
+     display: flex;
+     transition: transform 0.5s ease-in-out;
+     width: 100%;
+}
+.slide {
+    min-width: 100%;
+}
+.slide img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    background-color: #4e4197;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.prev { left: 34px; }
+.next { right: 0px; }
+
+.prev:hover, .next:hover {
+    background-color: #3c3378;
+}
+.gezin {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px; 
+  background-color: #f9f9f9;
+  padding: 40px;
+  margin: 140px auto; 
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1200px;
+  transition: background-color 0.3s ease;
+}
+
+.gezin img {
+  width: 350px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.gezin h2 {
+  margin-top: 0;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.gezin p {
+  line-height: 1.9;
+  font-size: 17px;
+  color: #333;
+}
+
+.gezin.active {
+  background-color: #dce9ff;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    background: rgb(72, 143, 31);
+  }
+
+  .sehrim {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    margin-left: 0;
+  }
+
+  .sehrim table {
+    
+    width: 100%;
+  }
+
+  .sec-sehrim {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 15px;
+  }
+ @media (max-width: 768px) {
+   .navbar ul {
+    background-color: rgb(72, 143, 31);
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .navbar .logo {
+    float: none;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 20px 10px;
+    line-height: normal;
+  }
+}
+
+
+  .gez-yerler {
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+  }
+
+  .slider-container {
+    position: static;
+    width: 100%;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .gezin {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    margin: 60px auto;
+  }
+
+  .gezin img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .gezin h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .gezin p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 576px) {
+  .prev, .next {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .gezin {
+    padding: 15px;
+  }
+
+  .sec-sehrim h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Gezilecek yerler yazısını gizle */
+  .gez-yerler {
+    display: none !important;
+  }
+
+  /* Slider container'ı şehir bilgileri altına taşı ve boşluk bırak */
+  .slider-container {
+    position: static !important; /* mutlak konumdan çıkar */
+    margin: 40px auto 0 auto !important; /* üstten boşluk, ortalanmış */
+    max-width: 90% !important;
+    width: 90% !important;
+    left: auto !important; /* pozisyon temizliği */
+    top: auto !important;
+    border-radius: 10px;
+    text-align: center;
+  }
+   .prev, .next {
+    position: static !important;
+    display: inline-block;
+    margin: 10px 15px;
+    transform: none !important;
+  }
+
+  /* Okları slider container altında yan yana ortala */
+  
+
+  /* .sehrim ve .sec-sehrim sonrası boşluk için parent container'a padding */
+  .container {
+    padding-bottom: 60px;
+  }
+}
+
+
+
+.sayfa {
+    background-color: #f0f8f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.takim h1 {
+    color: #2e8b57;
+}
+
+.takim img {
+    width: 150px;
+    height: 140px;
+}
+
+.takim p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.takim a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #2e8b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.takim a:hover {
+    background-color: #246b44;
+}
+.arka-plan {
+    position: fixed;    
+    left: 0;
+    width: 100vw;     
+    height: 100vh;      
+    background-image: url("resimler/bff0382c63594f03af31a8d99ba789e2.jpg");
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+    opacity: 0.2;                   
+}
+.sayfa .navbar2 {
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar2 ul {
+    float: right;
+    margin-right: 20px;
+}
+.navbar2 ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar2 ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.navbar2 .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+.navbar2 .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+/* Sayfa küçüldüğünde takım kutusunu esnek yap ve metni küçült */
+.takim {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    max-width: 700px;
+    /* left: 28%; */     /* Bunu kaldır */
+    margin: 60px auto 0 auto; /* Üst boşluk 60px, yatayda otomatik ortala */
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+/* Mobilde yazılar küçülsün ve kutu daha dar olsun */
+@media (max-width: 768px) {
+  .takim {
+    max-width: 90vw;    /* Maks %90 ekran genişliği */
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 100px;  /* Navbar altına inmesi için */
+  }
+  .takim h1 {
+    font-size: 1.5rem;
+  }
+  .takim p {
+    font-size: 0.9rem;
+  }
+  .takim img {
+    width: 100px;
+    height: auto;
+  }
+  .takim a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+    .navbar2 ul {
+    background-color: rgb(72, 143, 31);
+    padding: 10px 0; /* biraz üst-alt boşluk */
+    border-radius: 0 0 10px 10px; /* alt köşeleri hafif yuvarlat */
+  }
+}
+
+
+.kitap-sayfa {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  text-align: center; 
+  min-height: 100vh; 
+  margin: 0;
+  background: #0dc4b4;
+}
+
+.kitap {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin:20px auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.kitap h5 {
+  margin: 0 0 15px;
+  color: darkgreen;
+  border-bottom: 1px solid #222;
+  font-size: large;
+}
+.kitap .isim {
+  margin-top: 5px;
+  margin-bottom: 20px; 
+  width: 90%;
+  text-align: left; 
+}
+
+.kitap label {
+  display: block;
+  margin-bottom: 8px;
+}
+.kitap input {
+  padding:10px;
+  border-radius: 7px;
+  width: 90%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.ara {
+  margin-top: 20px;
+}
+
+.ara input {
+  padding: 8px 20px;
+  background-color: #411cc5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sonuc {
+  background-color: #fff;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.sonuc p{
+  color: #222;
+}
+.kitap-sayfa .navbar2{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+.navbar2 ul {
+    float: right;
+    margin-right: 20px;
+}
+.navbar2 ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar2 ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.navbar2 .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+.navbar2 .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+/* Küçük ekranlarda (tablet ve altı) kitap kutusunu daralt */
+@media (max-width: 768px) {
+  .kitap {
+    width: 90% !important; /* Yüzde tabanlı genişlik, max 300px değil */
+    height: auto; /* Yükseklik otomatik */
+    padding: 15px;
+    margin-top: 120px;
+  }
+
+  .kitap .isim input {
+    width: 100% !important; /* input genişliği %100 olsun */
+  }
+
+  /* Navbar ul float sağdaki kısmı kır */
+  .kitap .navbar2 ul {
+    float: none !important;
+    margin: 10px auto !important;
+    text-align: center;
+  }
+
+  /* Navbar ul li blok olarak yığılacak */
+  .kitap .navbar2 ul li {
+    display: block !important;
+    margin: 5px 0 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Logo ortalanacak */
+  .kitap .navbar2 .logo {
+    float: none !important;
+    margin: 10px auto !important;
+    text-align: center;
+  }
+}
+
+/* Çok küçük ekranlarda (mobil) ekstra iyileştirme */
+@media (max-width: 480px) {
+  .kitap h5 {
+    font-size: 1.2rem;
+  }
+
+  .ara input {
+    width: 90% !important;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.form-page .navbar2{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(72, 143, 31);
+}
+.navbar2 ul {
+    float: right;
+    margin-right: 20px;
+}
+.navbar2 ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar2 ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.navbar2 .logo {
+    float: left; 
+    margin-left: 5; 
+    margin-top: 20px;
+}
+.navbar2 .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+}
+@media (max-width: 768px) {
+  /* Navbar içeriğini alt alta al */
+  .navbar2 ul {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar2 ul li {
+    display: block;
+    line-height: 40px; /* Daha kısa olsun mobilde */
+    margin: 0;
+  }
+
+  .navbar2 .logo {
+    float: none;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Formu navbar'dan ayır */
+  .form-page form {
+    margin-top: 100px; /* Navbar'a çarpmasın */
+    padding: 10px;
+  }
+
+  /* Body padding */
+  body.form-page {
+    padding: 10px;
+  }
+}
+
+
+
+
+

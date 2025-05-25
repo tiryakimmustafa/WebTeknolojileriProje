@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İletişim Formu</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="form-page">
+  <div class="navbar2">
+    <div class="logo">
+      <a href="#">GİRESUN</a>
+    </div>
+    <div class="kisisel">
+      <ul>
+        <li><a href="giris.html">GİRİŞ</a> </li>
+        <li><a href="hakkımda.html">HAKKIMDA</a> </li>
+        <li><a href="özgeçmiş.html">EĞİTİM</a></li>
+        <li><a href="şehrimiz.html">ŞEHRİMİZ</a></li>
+        <li><a href="takımımız.html">TAKIMIMIZ</a></li>
+        <li><a href="ilgialanlarim.html">İLGİ ALANLARIM</a> </li>
+        <li><a href="iletisim.html">İLETİŞİM</a></li>                    
+      </ul>
+    </div>
+  </div>
+
+  <!-- Responsive Bootstrap Container -->
+  <div class="container mt-5 pt-0">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <form id="contactForm">
+          <input id="name" v-model="name" placeholder="İsim" class="form-control mb-3" /><br />
+          <input id="email" v-model="email" placeholder="E-posta" class="form-control mb-3" /><br />
+          <input id="phone" v-model="phone" placeholder="Telefon" class="form-control mb-3" /><br />
+          <textarea id="message" v-model="message" placeholder="Mesaj" class="form-control mb-3" rows="4"></textarea><br />
+
+          <div class="d-grid gap-2">
+            <button id="jsValidateBtn" type="button" class="btn btn-primary">JS ile Doğrula</button>
+            <button id="vueValidateBtn" type="button" class="btn btn-secondary">Vue ile Doğrula</button>
+            <button id="clearBtn" type="button" class="btn btn-warning">Temizle</button>
+            <button id="submitBtn" type="button" class="btn btn-success">Gönder</button>
+          </div>
+        </form>
+
+        <div id="result" class="mt-3 text-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const vueApp = new Vue({
+      el: '#contactForm',
+      data: {
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        errors: []
+      },
+      methods: {
+        validateVue() {
+          this.errors = [];
+          if (!this.name.trim()) this.errors.push("İsim boş olamaz.");
+          if (!this.email.trim()) {
+            this.errors.push("E-posta boş olamaz.");
+          } else if (!/^\S+@\S+\.\S+$/.test(this.email)) {
+            this.errors.push("Geçersiz e-posta formatı.");
+          }
+          if (!this.phone.trim()) {
+            this.errors.push("Telefon boş olamaz.");
+          } else if (!/^\d+$/.test(this.phone)) {
+            this.errors.push("Telefon sadece rakamlardan oluşmalı.");
+          }
+          if (!this.message.trim()) this.errors.push("Mesaj boş olamaz.");
+          const resultDiv = document.getElementById('result');
+          if (this.errors.length > 0) {
+            resultDiv.style.color = 'red';
+            resultDiv.innerHTML = this.errors.join('<br>');
+            return false;
+          } else {
+            resultDiv.style.color = 'green';
+            resultDiv.innerHTML = "Vue.js ile doğrulama başarılı!";
+            return true;
+          }
+        },
+        clearForm() {
+          this.name = '';
+          this.email = '';
+          this.phone = '';
+          this.message = '';
+          this.errors = [];
+          document.getElementById('result').innerHTML = '';
+        }
+      }
+    });
+
+    function jsValidate() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      let errors = [];
+      if (!name) errors.push("İsim boş olamaz.");
+      if (!email) {
+        errors.push("E-posta boş olamaz.");
+      } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        errors.push("Geçersiz e-posta formatı.");
+      }
+      if (!phone) {
+        errors.push("Telefon boş olamaz.");
+      } else if (!/^\d+$/.test(phone)) {
+        errors.push("Telefon sadece rakamlardan oluşmalı.");
+      }
+      if (!message) errors.push("Mesaj boş olamaz.");
+      const resultDiv = document.getElementById('result');
+      if (errors.length > 0) {
+        resultDiv.style.color = 'red';
+        resultDiv.innerHTML = errors.join('<br>');
+        return false;
+      } else {
+        resultDiv.style.color = 'green';
+        resultDiv.innerHTML = "JS ile doğrulama başarılı!";
+        return true;
+      }
+    }
+
+    document.getElementById('jsValidateBtn').addEventListener('click', () => {
+      jsValidate();
+    });
+
+    document.getElementById('vueValidateBtn').addEventListener('click', () => {
+      vueApp.validateVue();
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      vueApp.clearForm();
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      if (jsValidate()) {
+        const newMessage = {
+          name: vueApp.name.trim(),
+          email: vueApp.email.trim(),
+          phone: vueApp.phone.trim(),
+          message: vueApp.message.trim(),
+          date: new Date().toLocaleString()
+        };
+        let messages = JSON.parse(sessionStorage.getItem('messages') || '[]');
+        messages.push(newMessage);
+        sessionStorage.setItem('messages', JSON.stringify(messages));
+        alert("Form gönderildi!");
+        vueApp.clearForm();
+        window.location.href = "sonuc.html";
+      }
+    });
+  </script>
+</body>
+</html>

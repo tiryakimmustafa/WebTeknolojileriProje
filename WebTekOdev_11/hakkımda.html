@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HAKKIMDA</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body class="kendim">
+  <div id="giris-mesaji" style="display: none; background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px; text-align: center;"></div>
+
+  <div class="navbar2">
+    <div class="logo">
+      <a href="#">GİRESUN</a>
+    </div>
+    <div class="kisisel">
+      <ul>
+        <li><a href="giris.html">GİRİŞ</a> </li>
+        <li><a href="hakkımda.html">HAKKIMDA</a> </li>
+        <li><a href="özgeçmiş.html">EĞİTİM</a></li>
+        <li><a href="şehrimiz.html">ŞEHRİMİZ</a></li>
+        <li><a href="takımımız.html">TAKIMIMIZ</a></li>
+        <li><a href="ilgialanlarim.html">İLGİ ALANLARIM</a> </li>
+        <li><a href="iletisim.html">İLETİŞİM</a></li>                    
+      </ul>
+    </div>
+  </div>
+
+  <div class="hakkimda-container">
+    <div class="profil">
+      <img src="resimler/profil.jpg" alt="Profil Fotoğrafı" />
+      <div class="profil-bilgi">
+        <h2>Merhaba, Ben Muhammed Mustafa Tiryaki</h2>
+        <p>17 Mart 2005'te İstanbul Üsküdar'da doğdum. Şu anda Giresun’da ailemle birlikte yaşıyorum. Sakin bir yapım olsa da içten içe hırslı, dikkatli ve kararlı biriyim. Hayattaki hedefim başarılı bir mühendis olup insanların hayatına değer katacak projelerde yer almak.</p>
+      </div>
+    </div>
+
+    <h3>Hedefim</h3>
+    <p>İyi bir mühendis olmak ve büyük teknoloji şirketlerinde insanların hayatına dokunan işler üretmek. Bu hedef doğrultusunda sürekli öğreiyor ve kendimi geliştirmeye çalışıyorum.</p>
+
+    <h3>İlgi Alanlarım</h3>
+    <ul>
+      <li>Futbol oynamak</li>
+      <li>Spor yapmak</li>
+      <li>Sevdiğim türde kitaplar okumak(Yağmur Sonrası)</li>
+      <li>Dizi ve film izlemek(Vikingler, Interstellar)</li>
+      <li>Kafaya koyduğum hedefler için çalışmak</li>
+    </ul>
+
+    <h3>Ailem</h3>
+    <p>Bir ablam ve bir küçük erkek kardeşim var. Ablam evli ve ben annem, babam ve kardeşimle Giresun’da yaşıyorum. Ailem benim en büyük destekçim.</p>
+
+    <h3>Neden Mühendislik?</h3>
+    <p>Küçüklüğümden beri sistemleri çözmek, yeni şeyler üretmek ve problemlere çözüm bulmak beni heyecanlandırıyor. Mühendislik tam da bu tutkularımın mesleğe dönüşmüş hali.</p>
+  </div>
+
+  <script>
+    const studentNumber = localStorage.getItem('student_number');
+    if (studentNumber) {
+        const mesajDiv = document.getElementById('giris-mesaji');
+        mesajDiv.textContent = `Hoş geldiniz, ${studentNumber}`;
+        mesajDiv.style.display = 'block';
+        setTimeout(() => {
+            mesajDiv.style.display = 'none';
+        }, 5000);
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
